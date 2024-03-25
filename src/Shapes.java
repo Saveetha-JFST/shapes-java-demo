@@ -34,7 +34,8 @@ class Triangle extends Shape {
     }
 
     public double calculateArea() {
-        return 0.5 * base * height;
+        final double HALF = 0.5;
+        return HALF * base * height;
     }
 
     public double calculatePerimeter() {
@@ -44,17 +45,19 @@ class Triangle extends Shape {
 
 class Circle extends Shape {
     private final double radius;
+    private final double PI_VALUE = 3.14;
 
     public Circle(double radius) {
         this.radius = radius;
     }
 
     public double calculateArea() {
-        return 3.14 * radius * radius;
+        return PI_VALUE * radius * radius;
     }
 
     public double calculatePerimeter() {
-        return 2 * 3.14 * radius;
+        final double TWO = 2;
+        return TWO * PI_VALUE * radius;
     }
 }
 
